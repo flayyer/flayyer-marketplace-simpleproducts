@@ -1,6 +1,6 @@
 // Created with create-flayyer-app@1.18.2
 
-const endent = require('endent');
+const {default: endent} = require('endent');
 const {config} = require('@flayyer/flayyer-types');
 require('dotenv').config();
 
