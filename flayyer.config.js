@@ -1,5 +1,6 @@
 // Created with create-flayyer-app@1.18.2
 
+const endent = require('endent');
 const {config} = require('@flayyer/flayyer-types');
 require('dotenv').config();
 
@@ -10,7 +11,7 @@ module.exports = config({
 
   // Optionals
   name: 'Simple Products',
-  description: `
+  description: endent`
     Free deck of templates for products.
 
     > Default image credits: [Photo by Bogdan Glisik from Pexels](https://www.pexels.com/photo/photo-of-woman-wearing-gray-adidas-hoodie-1661471/)

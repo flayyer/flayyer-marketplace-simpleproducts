@@ -18,15 +18,17 @@ import {isFiniteNumber} from '../utils';
 export const schema = V.Object({
   title: V.String({default: 'Gray hoodie'}),
   description: V.String({
-    default: `A sweatshirt is fashioned out of a thick, usually cotton jersey material. Sweatshirts are also almost exclusively casual attire and hence not as dressy as some sweaters. Sweatshirts may or may not have a hood.`
+    default: `A sweatshirt is fashioned out of a thick, usually cotton jersey material.`
   }),
   image: V.Image({
     title: 'Image',
     default: example,
     examples: [example]
   }),
-  currency: V.Optional(V.String({default: 'USD'})),
-  price: V.Optional(V.Number()),
+  currency: V.Optional(
+    V.String({default: 'USD', examples: ['USD', 'EUR', 'CLP', 'RUB']})
+  ),
+  price: V.Optional(V.Number({examples: ['59.99']})),
   font: V.Optional(
     V.Font({
       default: 'Inter',
@@ -84,7 +86,7 @@ export default function MainTemplate(props: TemplateProps<Variables>) {
           <h1
             style={{fontFamily: font}}
             className={clsx(
-              'font-semibold text-xl sq:text-2xl leading-tight text-gray-800'
+              'font-semibold text-2xl leading-tight text-gray-800'
             )}
           >
             {title}
