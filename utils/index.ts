@@ -9,6 +9,6 @@ export function useFormatter(
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
-    currencyDisplay: 'narrowSymbol'
+    currencyDisplay: 'symbol' // 'narrowSymbol' fails on Safari iOS
   });
 }
