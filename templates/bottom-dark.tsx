@@ -5,7 +5,7 @@ import {Static, Validator} from '@flayyer/variables';
 
 import '../styles/tailwind.css';
 
-import {TemplateHorizontal} from '../components/template/horizontal';
+import {TemplateVertical} from '../components/template/vertical';
 import {schema as schemaBase} from '../schema/schema';
 
 /**
@@ -17,11 +17,13 @@ type Variables = Static<typeof schema>;
 
 const validator = new Validator(schema);
 
-// Make sure to 'export default' a React component
-export default function LeftTemplate(props: TemplateProps<Variables>) {
+export default function BottomTemplate(props: TemplateProps<Variables>) {
   const {width, height, variables, locale} = props;
 
   const {data} = validator.parse(variables);
 
-  return <TemplateHorizontal {...data} locale={locale} className="flex-row" />;
+  return (
+    <TemplateVertical {...data} locale={locale} reverse={false} className="flex-col dark" />
+  );
 }
+

@@ -27,6 +27,13 @@ module.exports = {
    */
   darkMode: 'class',
   theme: {
+    // Use "em" values instead of "rem" to work with "@flayyer/use-fit-text"
+    fontSize: Object.fromEntries(
+      Object.entries(defaultTheme.fontSize).map(([key, value]) => [
+        key,
+        value[0].replace('rem', 'em')
+      ])
+    ),
     extend: {
       spacing: {
         /**
