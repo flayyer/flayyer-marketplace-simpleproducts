@@ -23,7 +23,11 @@ export default function BottomTemplate(props: TemplateProps<Variables>) {
   const {data} = validator.parse(variables);
 
   return (
-    <TemplateVertical {...data} locale={locale} reverse={false} className="flex-col" />
+    <TemplateVertical
+      {...data}
+      locale={locale}
+      reverse={false}
+      className="flex-col"
+    />
   );
 }
-

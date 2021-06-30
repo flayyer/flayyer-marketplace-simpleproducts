@@ -52,9 +52,13 @@ export function TemplateVertical(
 
   return (
     <Layer
-      className={clsx('overflow-hidden max-h-screen flex items-stretch', className, {
-        'flayyer-ready': googleFont.status
-      })}
+      className={clsx(
+        'overflow-hidden subpixel-antialiased max-h-screen flex items-stretch',
+        className,
+        {
+          'flayyer-ready': googleFont.status
+        }
+      )}
       {...extra}
     >
       <Layer className="bg-white dark:bg-black" style={{zIndex: -10}} />
@@ -63,7 +67,12 @@ export function TemplateVertical(
         <img className="w-full h-full object-cover" src={proxy(image)} />
       </div>
 
-      <div className={clsx("flex-none h-2/5 px-3 py-2 sq:px-4 sq:py-4", reverse ? "story:pt-storysafe" : "story:pb-storysafe")}>
+      <div
+        className={clsx(
+          'flex-none h-2/5 px-3 py-2 sq:px-4 sq:py-4',
+          reverse ? 'story:pt-storysafe' : 'story:pb-storysafe'
+        )}
+      >
         <Header
           ref={ref}
           style={{fontSize}}
