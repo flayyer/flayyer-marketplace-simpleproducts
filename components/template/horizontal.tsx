@@ -61,11 +61,13 @@ export function TemplateHorizontal(
     >
       <Layer className="bg-white dark:bg-black" style={{zIndex: -10}} />
 
-      <div className="flex-none w-2/5 ">
+      <div className="flex-none w-full banner:w-2/5 ">
         <img className="w-full h-full object-cover" src={proxy(image)} />
       </div>
 
-      <div className={clsx('flex-none w-3/5 p-4 sq:p-5 story:py-storysafe')}>
+      <div className={clsx(
+        'hidden banner:block',
+        'flex-none w-3/5 p-4 sq:p-5 story:py-storysafe')}>
         <Header
           ref={ref}
           style={{fontSize}}

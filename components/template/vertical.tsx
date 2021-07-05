@@ -63,12 +63,13 @@ export function TemplateVertical(
     >
       <Layer className="bg-white dark:bg-black" style={{zIndex: -10}} />
 
-      <div className="flex-none h-3/5 ">
+      <div className="flex-none banner:h-3/5">
         <img className="w-full h-full object-cover" src={proxy(image)} />
       </div>
 
       <div
         className={clsx(
+          'hidden banner:block',
           'flex-none h-2/5 px-3 py-2 sq:px-4 sq:py-4',
           reverse ? 'story:pt-storysafe' : 'story:pb-storysafe'
         )}

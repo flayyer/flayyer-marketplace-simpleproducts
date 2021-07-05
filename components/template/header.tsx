@@ -30,7 +30,7 @@ export const Header = React.forwardRef<
   return (
     <header
       ref={ref}
-      className={clsx('hidden banner:block', className)}
+      className={clsx(className)}
       {...extra}
     >
       <h1
