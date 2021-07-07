@@ -41,7 +41,7 @@ export const Header = React.forwardRef<
       >
         {title}
       </h1>
-      {isFiniteNumber(price) && (
+      {formatter && isFiniteNumber(price) && (
         <p
           className={clsx(
             'mt-1 text-gray-900 dark:text-gray-300 text-base font-normal'

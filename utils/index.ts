@@ -6,9 +6,14 @@ export function useFormatter(
   locale: string | undefined,
   currency: string | undefined
 ) {
-  return new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency,
-    currencyDisplay: 'symbol' // 'narrowSymbol' fails on Safari iOS
-  });
+  try {
+
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency,
+      currencyDisplay: 'symbol' // 'narrowSymbol' fails on Safari iOS
+    });
+  } catch {
+    return null
+  }
 }
