@@ -1,8 +1,8 @@
 import React from 'react';
-import {useFitText} from '@flayyer/use-fit-text';
-import {useGoogleFonts} from '@flayyer/use-googlefonts';
-import {proxy} from '@flayyer/proxy';
-import {Static} from '@flayyer/variables';
+import {useFitText} from '@flyyer/use-fit-text';
+import {useGoogleFonts} from '@flyyer/use-googlefonts';
+import {proxy} from '@flyyer/proxy';
+import {Static} from '@flyyer/variables';
 import clsx from 'clsx';
 
 import {schema} from '../../schema/schema';
@@ -54,7 +54,7 @@ export function TemplateHorizontal(
         'overflow-hidden subpixel-antialiased flex items-stretch',
         className,
         {
-          'flayyer-ready': googleFont.status
+          'flyyer-ready': googleFont.status
         }
       )}
       {...extra}

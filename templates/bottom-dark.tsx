@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {TemplateProps} from '@flayyer/flayyer-types';
-import {Static, Validator} from '@flayyer/variables';
+import {TemplateProps} from '@flyyer/types';
+import {Static, Validator} from '@flyyer/variables';
 
 import '../styles/tailwind.css';
 
@@ -9,7 +9,7 @@ import {TemplateVertical} from '../components/template/vertical';
 import {schema as schemaBase} from '../schema/schema';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = schemaBase;
 

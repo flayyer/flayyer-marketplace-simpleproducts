@@ -1,5 +1,5 @@
 import React from 'react';
-import {Static} from '@flayyer/variables';
+import {Static} from '@flyyer/variables';
 import clsx from 'clsx';
 
 import {useFormatter, isFiniteNumber} from '../../utils';

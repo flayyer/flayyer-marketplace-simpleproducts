@@ -1,9 +1,9 @@
-import {Variable as V} from '@flayyer/variables';
+import {Variable as V} from '@flyyer/variables';
 
 import example from '../static/example.jpeg';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 
 export const schema = V.Object({
