@@ -28,11 +28,7 @@ export const Header = React.forwardRef<
   const formatter = useFormatter(locale, currency);
 
   return (
-    <header
-      ref={ref}
-      className={clsx(className)}
-      {...extra}
-    >
+    <header ref={ref} className={clsx(className)} {...extra}>
       <h1
         style={{fontFamily: font}}
         className={clsx(

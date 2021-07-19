@@ -1,6 +1,6 @@
 import React from 'react';
 import {useFitText} from '@flyyer/use-fit-text';
-import {useGoogleFonts} from '@flyyer/use-googlefonts';
+import {GoogleFontsStatus, useGoogleFonts} from '@flyyer/use-googlefonts';
 import {proxy} from '@flyyer/proxy';
 import {Static} from '@flyyer/variables';
 import clsx from 'clsx';
@@ -39,14 +39,10 @@ export function TemplateHorizontal(
     }))
   );
 
-  const {fontSize, ref} = useFitText({maxFontSize: 100 /* 100% */}, [
-    title,
-    description,
-    price,
-    currency,
-    font,
-    fontSecondary
-  ]);
+  const {fontSize, ref, isCalculating} = useFitText(
+    {maxFontSize: 100 /* 100% */, resolution: 6},
+    [title, description, price, currency, font, fontSecondary]
+  );
 
   return (
     <Layer
@@ -54,7 +50,8 @@ export function TemplateHorizontal(
         'overflow-hidden subpixel-antialiased flex items-stretch',
         className,
         {
-          'flyyer-ready': googleFont.status
+          'flyyer-wait':
+            isCalculating || googleFont.status === GoogleFontsStatus.LOADING
         }
       )}
       {...extra}
@@ -65,9 +62,12 @@ export function TemplateHorizontal(
         <img className="w-full h-full object-cover" src={proxy(image)} />
       </div>
 
-      <div className={clsx(
-        'hidden banner:block',
-        'flex-none w-3/5 p-4 sq:p-5 story:py-storysafe')}>
+      <div
+        className={clsx(
+          'hidden banner:block',
+          'flex-none w-3/5 p-4 sq:p-5 story:py-storysafe'
+        )}
+      >
         <Header
           ref={ref}
           style={{fontSize}}
