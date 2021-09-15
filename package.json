@@ -9,7 +9,7 @@
     "format": "xo --fix"
   },
   "dependencies": {
-    "@flyyer/proxy": "^2.0.0",
+    "@flyyer/proxy": "^2.1.2",
     "@flyyer/types": "^2.0.3",
     "@flyyer/use-fit-text": "^3.0.1",
     "@flyyer/use-googlefonts": "^0.4.2",
@@ -21,19 +21,17 @@
     "use-smartcrop": "^1.0.1"
   },
   "devDependencies": {
-    "@flyyer/cli": "^2.0.1",
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
+    "@flyyer/cli": "^3.0.0-beta.4",
     "@types/react": "^17.0.21",
-    "autoprefixer": "^9",
+    "autoprefixer": "^10.3.4",
     "dotenv": "^10.0.0",
     "endent": "^2.1.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-config-xo-typescript": "^0.44.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.15",
     "typescript": "^4.4.3",
     "xo": "0.44.0"
   },

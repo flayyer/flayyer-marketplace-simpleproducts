@@ -6,23 +6,13 @@ const defaultTheme = require('tailwindcss/defaultTheme');
  * See ./styles/tailwind.css for info about measurements in rem units and the default font-size.
  */
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './templates/**/*.ts',
-      './templates/**/*.tsx',
-      './templates/**/*.js',
-      './templates/**/*.jsx',
-      './components/**/*.ts',
-      './components/**/*.tsx',
-      './components/**/*.js',
-      './components/**/*.jsx',
-      './styles/**/*.css',
-      './styles/**/*.scss',
-      './styles/**/*.sass',
-      './styles/**/*.less',
-    ],
-  },
+  mode: 'jit',
+  purge: [
+    './.flyyer-processed/**/*.{html,js,jsx,ts,tsx,vue,vuex,css,scss,sass,less}',
+    './templates/**/*.{html,js,jsx,ts,tsx,vue,vuex,css,scss,sass,less}',
+    './components/**/*.{html,js,jsx,ts,tsx,vue,vuex,css,scss,sass,less}',
+    './styles/**/*.{html,js,jsx,ts,tsx,vue,vuex,css,scss,sass,less}',
+  ],
   /**
    * Toggle dark/light scheme depending on contrast.
    * https://docs.flyyer.io/docs/advanced/contrast
