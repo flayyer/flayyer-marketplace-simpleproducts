@@ -16,7 +16,7 @@ export interface BaseTemplateProps extends Variables {
   reverse: boolean;
 }
 export function TemplateVertical(
-  props: BaseTemplateProps & React.ComponentProps<typeof Layer>
+  props: BaseTemplateProps & React.ComponentProps<typeof Layer>,
 ) {
   const {
     font,
@@ -37,13 +37,13 @@ export function TemplateVertical(
   const googleFont = useGoogleFonts(
     fonts.map((f) => ({
       family: f,
-      styles: Array.from(new Set([200, 400, 600, 800]))
-    }))
+      styles: Array.from(new Set([200, 400, 600, 800])),
+    })),
   );
 
   const {fontSize, ref, isCalculating} = useFitText(
     {maxFontSize: 100 /* 100% */, resolution: 6},
-    [title, description, price, currency, font, fontSecondary]
+    [title, description, price, currency, font, fontSecondary],
   );
 
   return (
@@ -53,8 +53,8 @@ export function TemplateVertical(
         className,
         {
           'flyyer-wait':
-            isCalculating || googleFont.status === GoogleFontsStatus.LOADING
-        }
+            isCalculating || googleFont.status === GoogleFontsStatus.LOADING,
+        },
       )}
       {...extra}
     >
@@ -68,7 +68,7 @@ export function TemplateVertical(
         className={clsx(
           'hidden banner:block',
           'flex-none h-2/5 px-3 py-2 sq:px-4 sq:py-4',
-          reverse ? 'story:pt-storysafe' : 'story:pb-storysafe'
+          reverse ? 'story:pt-storysafe' : 'story:pb-storysafe',
         )}
       >
         <Header
@@ -83,7 +83,7 @@ export function TemplateVertical(
             fontSecondary,
             locale,
             currency,
-            image
+            image,
           }}
         />
       </div>

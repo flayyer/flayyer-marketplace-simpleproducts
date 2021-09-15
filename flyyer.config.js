@@ -1,5 +1,7 @@
 // Created with create-flyyer-app@1.18.2
 
+const process = require('process');
+
 const {default: endent} = require('endent');
 const {config} = require('@flyyer/types');
 require('dotenv').config();
@@ -21,5 +23,5 @@ module.exports = config({
   license: 'MIT',
   private: false, // Set to false to deploy publicly to https://flyyer.io/community
   repository: 'https://github.com/useflyyer/flyyer-marketplace-simpleproducts',
-  sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'] // Declare supported sizes
+  sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'], // Declare supported sizes
 });

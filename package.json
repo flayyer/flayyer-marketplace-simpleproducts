@@ -29,12 +29,13 @@
     "dotenv": "^10.0.0",
     "endent": "^2.1.0",
     "eslint-config-xo-react": "^0.25.0",
+    "eslint-config-xo-typescript": "^0.44.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.3",
-    "xo": "0.39.1"
+    "xo": "0.44.0"
   },
   "xo": {
     "prettier": true,
@@ -48,9 +49,8 @@
       "react/function-component-definition": "off",
       "unicorn/prefer-module": "off",
       "unicorn/no-array-callback-reference": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/triple-slash-reference": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unused-vars": "off"
     }
   }

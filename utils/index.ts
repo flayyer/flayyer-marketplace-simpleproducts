@@ -4,13 +4,13 @@ export function isFiniteNumber(value: any): value is number {
 
 export function useFormatter(
   locale: string | undefined,
-  currency: string | undefined
+  currency: string | undefined,
 ) {
   try {
     return new Intl.NumberFormat(locale, {
       style: 'currency',
       currency,
-      currencyDisplay: 'symbol' // 'narrowSymbol' fails on Safari iOS
+      currencyDisplay: 'symbol', // 'narrowSymbol' fails on Safari iOS
     });
   } catch {
     return null;

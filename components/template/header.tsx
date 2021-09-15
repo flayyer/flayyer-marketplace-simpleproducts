@@ -32,7 +32,7 @@ export const Header = React.forwardRef<
       <h1
         style={{fontFamily: font}}
         className={clsx(
-          'font-semibold leading-tight text-2xl text-gray-800 dark:text-white'
+          'font-semibold leading-tight text-2xl text-gray-800 dark:text-white',
         )}
       >
         {title}
@@ -40,7 +40,7 @@ export const Header = React.forwardRef<
       {formatter && isFiniteNumber(price) && (
         <p
           className={clsx(
-            'mt-1 text-gray-900 dark:text-gray-300 text-base font-normal'
+            'mt-1 text-gray-900 dark:text-gray-300 text-base font-normal',
           )}
         >
           {price <= Number.EPSILON ? 'Free' : formatter.format(price)}
@@ -54,7 +54,7 @@ export const Header = React.forwardRef<
             className={clsx(
               'font-normal',
               'text-sm sq:text-base',
-              'text-gray-600 dark:text-gray-500'
+              'text-gray-600 dark:text-gray-500',
             )}
           >
             {text}

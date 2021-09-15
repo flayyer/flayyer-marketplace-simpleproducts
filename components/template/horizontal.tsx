@@ -15,7 +15,7 @@ export interface BaseTemplateProps extends Variables {
   locale?: string;
 }
 export function TemplateHorizontal(
-  props: BaseTemplateProps & React.ComponentProps<typeof Layer>
+  props: BaseTemplateProps & React.ComponentProps<typeof Layer>,
 ) {
   const {
     font,
@@ -35,13 +35,13 @@ export function TemplateHorizontal(
   const googleFont = useGoogleFonts(
     fonts.map((f) => ({
       family: f,
-      styles: Array.from(new Set([200, 400, 600, 800]))
-    }))
+      styles: Array.from(new Set([200, 400, 600, 800])),
+    })),
   );
 
   const {fontSize, ref, isCalculating} = useFitText(
     {maxFontSize: 100 /* 100% */, resolution: 6},
-    [title, description, price, currency, font, fontSecondary]
+    [title, description, price, currency, font, fontSecondary],
   );
 
   return (
@@ -51,8 +51,8 @@ export function TemplateHorizontal(
         className,
         {
           'flyyer-wait':
-            isCalculating || googleFont.status === GoogleFontsStatus.LOADING
-        }
+            isCalculating || googleFont.status === GoogleFontsStatus.LOADING,
+        },
       )}
       {...extra}
     >
@@ -65,7 +65,7 @@ export function TemplateHorizontal(
       <div
         className={clsx(
           'hidden banner:block',
-          'flex-none w-3/5 p-4 sq:p-5 story:py-storysafe'
+          'flex-none w-3/5 p-4 sq:p-5 story:py-storysafe',
         )}
       >
         <Header
@@ -80,7 +80,7 @@ export function TemplateHorizontal(
             fontSecondary,
             locale,
             currency,
-            image
+            image,
           }}
         />
       </div>
